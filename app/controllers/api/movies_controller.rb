@@ -1,6 +1,6 @@
 class Api::MoviesController < ApplicationController
   def single_movie
-    @movie = Movie.find_by(id: 3)
+    @movie = Movie.second_to_last
     render "single_movie.json.jb"
   end
   def all_movies
