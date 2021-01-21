@@ -23,7 +23,9 @@ class Api::MoviesController < ApplicationController
   def update
     @movie = Movie.find_by(id: params[:id])
     @movie.title = params[:title] || @movie.title
+    @movie.director = params[:director] || @movie.director
     @movie.year = params[:year] || @movie.year
+    @movie.english = params[:english] || @movie.english
     @movie.plot = params[:plot] || @movie.plot
     @movie.save
     render "show.json.jb"

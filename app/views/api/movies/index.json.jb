@@ -2,7 +2,9 @@
 {
   id: movie.id,
   title: movie.title,
+  director: movie.director,
   year: movie.year,
+  english: movie.english,
   plot: movie.plot
 }
 end
