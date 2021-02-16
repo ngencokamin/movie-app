@@ -8,7 +8,8 @@ class Api::MoviesController < ApplicationController
   end
   
   def index
-    @movies = Movie.where("english = true")
+    # @movies = Movie.where("english = true")
+    @movies = Movie.all
     render "index.json.jb"
   end
 
@@ -16,7 +17,9 @@ class Api::MoviesController < ApplicationController
     @movie = Movie.new(
       title: params[:title],
       year: params[:year],
-      plot: params[:plot]
+      plot: params[:plot],
+      director: params[:director],
+      english: params[:english]
     )
     if @movie.save
       render "show.json.jb"
