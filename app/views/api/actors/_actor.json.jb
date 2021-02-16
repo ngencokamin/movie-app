@@ -3,7 +3,7 @@
   first_name: actor.first_name,
   last_name: actor.last_name,
   age: actor.age,
-  gender: actor.gender,
+  gender: actor.gender.capitalize,
   known_for: actor.known_for,
   movie_plot: actor.movie.plot
 }
